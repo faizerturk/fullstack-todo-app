@@ -1,6 +1,6 @@
-// __tests__/App.test.js
-const { render, screen, fireEvent } = require('@testing-library/react');
-const Home = require('../app/page');
+// __tests__/App.test.tsx
+import { render, screen, fireEvent } from '@testing-library/react';
+import Home from '../app/page';
 
 describe('Todo App', () => {
   it('should add a new todo item', () => {

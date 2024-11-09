@@ -1,12 +1,22 @@
-module.exports = {
-  testEnvironment: 'jest-environment-jsdom',
+// jest.config.js
+const nextJest = require('next/jest');
+
+/** @type {import('jest').Config} */
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+
+    '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
+
+    '^.+\\.(png|jpg|jpeg|gif|webp|avif|svg)$':
+      '<rootDir>/__mocks__/fileMock.js',
   },
-  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
-  moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
-  },
+  testEnvironment: 'jest-environment-jsdom',
 };
+
+module.exports = createJestConfig(customJestConfig);
