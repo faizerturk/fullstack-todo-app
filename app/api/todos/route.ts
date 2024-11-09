@@ -1,8 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server';
+// app/api/todos/route.ts
+import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import Todo, { ITodo } from '@/models/Todo';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   await dbConnect();
 
   try {
@@ -13,7 +14,7 @@ export async function GET(request: NextRequest) {
   }
 }
 
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   await dbConnect();
 
   try {
