@@ -1,11 +1,6 @@
 # Fullstack Todo App
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Next.js](https://img.shields.io/badge/Next.js-15.0.3-blue)
-![React](https://img.shields.io/badge/React-18.0.0-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue)
-![Jest](https://img.shields.io/badge/Jest-29.0.0-brightgreen)
-![Docker](https://img.shields.io/badge/Docker-20.10.7-blue)
+here you can see the project on aws : http://ec2-13-60-83-149.eu-north-1.compute.amazonaws.com/
 
 ## Table of Contents
 
