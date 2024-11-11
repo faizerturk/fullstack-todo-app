@@ -3,5 +3,13 @@
   "rules": {
     "@typescript-eslint/no-explicit-any": "error",
     "no-var": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["jest.config.js"],
+      "rules": {
+        "@typescript-eslint/no-require-imports": "off"
+      }
+    }
+  ]
 }
